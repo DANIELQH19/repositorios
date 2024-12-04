@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Video de Fondo</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; 
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            z-index: 10;
+        }
+
+        header img {
+            height: 40px;
+            margin-right: 30px;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 100px; 
+            width: 100%;
+            height: calc(100vh - 100px);
+        }
+
+
+        .left {
+            width: 40%;
+            padding: 20px;
+            color: white;
+        }
+
+        .left h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .left p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .left img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .left button {
+            padding: 10px 20px;
+            background-color: #644849;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .left button:hover {
+            background-color: #666060;
+        }
+
+        .right {
+            width: 60%;
+            height: 100%;
+            background-color: transparent; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="netflix_PNG25.png" alt="Logo">
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Series</a>
+            <a href="#">Novedades</a>
+            <a href="#">Populares</a>
+            <a href="#">Mi Lista</a>
+        </nav>
+    </header>
+
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="MINIONS.mp4" type="video/mp4">
+    </video>
+
+    <!-- Main con dos partes -->
+    <main>
+        <div class="left">
+            <img src="minions logo.png" alt="Minions"> 
+            <p>Los Minions son criaturas amarillas que tienen un solo objetivo en la vida: servir al villano más malvado de todos. 
+                En su búsqueda de un líder, ellos forman parte de divertidas y desastrosas situaciones.</p> 
+            <button>Reproducir</button> 
+        </div>
+
+        <div class="right">
+        </div>
+    </main>
+
+</body>
+</html>
